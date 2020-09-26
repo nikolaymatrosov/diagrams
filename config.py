@@ -13,7 +13,7 @@ DIR_TEMPLATE = "templates"
 
 PROVIDERS = (
     "base", "onprem", "aws", "azure", "gcp", "firebase", "k8s", "alibabacloud", "oci", "programming", "saas", "elastic",
-    "generic", "openstack", "outscale")
+    "generic", "openstack", "outscale", "yc")
 
 #########################
 #  Resource Processing  #
@@ -41,6 +41,7 @@ FILE_PREFIXES = {
     "outscale": (),
     "generic": (),
     "openstack": (),
+    "yc": (),
 }
 
 #########################
@@ -69,6 +70,7 @@ UPPER_WORDS = {
     "generic": ("vpn", "ios", "xen", "sql"),
     "outscale": ("osc",),
     "openstack": ("rpm", "loci", "nfv", "ec2api"),
+    "yc": ("iam", "kms", "vpc", "ydb",),
 }
 
 TITLE_WORDS = {
@@ -416,4 +418,16 @@ ALIASES = {
             "Tripleo": "TripleO",
         }
     },
+    "yc": {
+        "infrastructure": {
+            "ObjectStorage": "S3",
+            "ManagedKubernetes": "MK8s",
+            "LoadBalancer": "Lb",
+            "InstanceGroup": "IG",
+        },
+        "serverless": {
+            "IotCore": "IoT",
+            "MessageQueue": "YMQ"
+        }
+    }
 }

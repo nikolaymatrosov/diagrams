@@ -39,7 +39,7 @@ def setcluster(cluster):
 
 class Diagram:
     __directions = ("TB", "BT", "LR", "RL")
-    __curvestyles = ("ortho", "curved")
+    __curvestyles = ("ortho", "curved", "spline", "polyline")
     __outformats = ("png", "jpg", "svg", "pdf")
 
     # fmt: off
